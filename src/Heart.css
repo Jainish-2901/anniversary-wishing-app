@@ -1,0 +1,62 @@
+/* Floating hearts container */
+.heart-side {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  pointer-events: none;
+  z-index: 5;
+  overflow: visible;
+}
+.heart-side.left {
+  left: 0;
+}
+.heart-side.right {
+  right: 0;
+}
+.heart {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #e63946;
+  transform: rotate(-45deg);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 2px #b22222);
+}
+.heart:before,
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  background-color: #e63946;
+  border-radius: 50%;
+}
+.heart:before {
+  top: -12.5px;
+  left: 0;
+}
+.heart:after {
+  left: 12.5px;
+  top: 0;
+}
+@keyframes floatUpLeft {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-45deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-800px) translateX(-50px) rotate(-45deg);
+    opacity: 0;
+  }
+}
+@keyframes floatUpRight {
+  0% {
+    transform: translateY(0) translateX(0) rotate(-45deg);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(-800px) translateX(50px) rotate(-45deg);
+    opacity: 0;
+  }
+}
