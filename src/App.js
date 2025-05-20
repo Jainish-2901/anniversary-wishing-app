@@ -54,7 +54,19 @@ function App() {
               અમે આશા રાખીએ છીએ કે તમે બંને હંમેશા ખુશ અને સ્વસ્થ રહો અને સદાય
               તમારા આર્શીવાદ અમારી સાથે રહે.
             </p>
-            
+            {/* Music */}
+            <audio id="bg-music" loop ref={musicRef}>
+              <source src="/Aap Dono Salamat Rahe.mp3" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+            <button
+              id="musicToggle"
+              className="btn btn-outline-danger"
+              onClick={toggleMusic}
+            >
+              {isPlaying ? "Pause Music" : "Play Music"}
+            </button>
+
             {/* Carousel */}
             <div
               id="anniversaryCarousel"
@@ -121,18 +133,6 @@ function App() {
               આ ખાસ દિવસ ને વધુ ખાસ બનાવા માટે અમારા તરફથી સપ્રેમ શુભકામનાઓ 💖
             </footer>
 
-            {/* Music */}
-            <audio id="bg-music" loop ref={musicRef}>
-              <source src="/Aap Dono Salamat Rahe.mp3" type="audio/mpeg" />
-              Your browser does not support the audio element.
-            </audio>
-            <button
-              id="musicToggle"
-              className="btn btn-outline-danger"
-              onClick={toggleMusic}
-            >
-              {isPlaying ? "Pause Music" : "Play Music"}
-            </button>
           </div>
         </div>
       </div>
