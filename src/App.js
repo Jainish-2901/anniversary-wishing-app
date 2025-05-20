@@ -61,7 +61,7 @@ function App() {
             </audio>
             <button
               id="musicToggle"
-              className="btn btn-outline-danger mb-5"
+              className="btn btn-outline-danger mb-2 mt--3"
               onClick={toggleMusic}
             >
               {isPlaying ? "Pause Music" : "Play Music"}
